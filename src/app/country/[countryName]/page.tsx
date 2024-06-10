@@ -7,7 +7,7 @@ interface Props {
   const CountryHome = ({ params }: Props) => {
     return (
       <div className="flex flex-col w-full" >
-        {params.countryName}
+        {params.countryName.replace('%20', ' ')}
       </div>
     );
   };
