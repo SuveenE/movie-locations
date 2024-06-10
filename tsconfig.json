@@ -29,4 +29,5 @@
       "module": "CommonJS"
     }
   },
+  "output": "export"
 }
