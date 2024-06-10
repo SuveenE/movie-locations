@@ -39,12 +39,5 @@ export interface Props {
     };
   };
   
-  export const getStaticProps: GetStaticProps = async ({ params }) => {
-    return {
-      props: {
-        params,
-      },
-    };
-  };
   
   export default CountryHome;
