@@ -33,7 +33,7 @@ export default function Home() {
       <Globe
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
-        labelsData={places as unknown as Feature[]} // Type assertion here
+        labelsData={places} // Type assertion here
         labelLat={(d) => (d as Feature).properties.latitude}
         labelLng={(d) => (d as Feature).properties.longitude}
         labelText={(d) => (d as Feature).properties.sov0name}
@@ -42,7 +42,7 @@ export default function Home() {
         labelColor={() => "rgba(255, 165, 0, 0.75)"}
         labelResolution={2}
         onLabelClick={(d) =>
-          router.push(`/country/${(d as Feature).properties.sov0name}`)
+          router.push(`/country/${(d as Feature).properties.sov0name || 'Singapore'}`)
         }
       />
     </main>
