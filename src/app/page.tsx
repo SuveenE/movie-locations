@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import Globe from 'react-globe.gl';
-import { Feature } from './utils/types';
+import { Feature } from '../utils/types';
 import geojsonData from './ne_110m_populated_places_simple.json'; 
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [places, setPlaces] = useState<Feature[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -34,6 +36,7 @@ export default function Home() {
           labelDotRadius={1}
           labelColor={() => 'rgba(255, 165, 0, 0.75)'}
           labelResolution={2}
+          onLabelClick = {(d) => router.push(`/country/${(d as Feature).properties.sov0name}`)}
         />
     </main>
   );
