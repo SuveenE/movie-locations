@@ -64,6 +64,7 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v4
         with:
+          sparse-checkout: portfolio|
           path: |
             .next/cache
           # Generate a new cache whenever packages or source files change.
