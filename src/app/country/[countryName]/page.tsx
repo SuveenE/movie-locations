@@ -16,7 +16,7 @@ export interface Props {
     );
   };
 
-async function generateStaticParams() {
+export async function generateStaticParams() {
     const { features } = await geojsonData;
     if (features){
       return features.map((feature: { properties: { sov0name: string } }) => ({
