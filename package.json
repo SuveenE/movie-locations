@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "globe.gl": "^2.32.4",
+    "json-loader": "^0.5.7",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",

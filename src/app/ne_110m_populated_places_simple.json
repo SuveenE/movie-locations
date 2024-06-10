@@ -1,0 +1,112 @@
+{
+    "type": "FeatureCollection",
+    "features": [ {
+    "type": "Feature",
+    "properties": {
+      "scalerank": 0,
+      "natscale": 600,
+      "labelrank": 0,
+      "featurecla": "Admin-0 capital",
+      "name": "Singapore",
+      "namepar": null,
+      "namealt": null,
+      "diffascii": 0,
+      "nameascii": "Singapore",
+      "adm0cap": 1,
+      "capalt": null,
+      "capin": null,
+      "worldcity": 1,
+      "megacity": 1,
+      "sov0name": "Singapore",
+      "sov_a3": "SGP",
+      "adm0name": "Singapore",
+      "adm0_a3": "SGP",
+      "adm1name": null,
+      "iso_a2": "SG",
+      "note": null,
+      "latitude": 1.29303346649,
+      "longitude": 103.855820678,
+      "changed": 0,
+      "namediff": 0,
+      "diffnote": null,
+      "pop_max": 5183700,
+      "pop_min": 3289529,
+      "pop_other": 3314179,
+      "rank_max": 13,
+      "rank_min": 12,
+      "geonameid": 1880252,
+      "meganame": "Singapore",
+      "ls_name": "Singapore",
+      "ls_match": 1,
+      "checkme": 5,
+      "min_zoom": 2.1
+    },
+    "bbox": [
+      103.853875,
+      1.294979,
+      103.853875,
+      1.294979
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        103.853875,
+        1.294979
+      ]
+    }
+  },{
+    "type": "Feature",
+    "properties": {
+      "scalerank": 4,
+      "natscale": 50,
+      "labelrank": 6,
+      "featurecla": "Admin-0 capital alt",
+      "name": "Sri Jawewardenepura Kotte",
+      "namepar": null,
+      "namealt": null,
+      "diffascii": 0,
+      "nameascii": "Sri Jawewardenepura Kotte",
+      "adm0cap": 0,
+      "capalt": 1,
+      "capin": "Legislative cap",
+      "worldcity": 0,
+      "megacity": 0,
+      "sov0name": "Sri Lanka",
+      "sov_a3": "LKA",
+      "adm0name": "Sri Lanka",
+      "adm0_a3": "LKA",
+      "adm1name": "Colombo",
+      "iso_a2": "LK",
+      "note": null,
+      "latitude": 6.90000388481,
+      "longitude": 79.9499930409,
+      "changed": 4,
+      "namediff": 1,
+      "diffnote": "Name changed.",
+      "pop_max": 115826,
+      "pop_min": 115826,
+      "pop_other": 2456292,
+      "rank_max": 9,
+      "rank_min": 9,
+      "geonameid": 1238992,
+      "meganame": null,
+      "ls_name": "Kotte",
+      "ls_match": 1,
+      "checkme": 0,
+      "min_zoom": 5.6
+    },
+    "bbox": [
+      79.949993,
+      6.900004,
+      79.949993,
+      6.900004
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        79.949993,
+        6.900004
+      ]
+    }
+  }]
+}
