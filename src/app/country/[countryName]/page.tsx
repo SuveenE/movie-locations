@@ -16,7 +16,7 @@ export interface Props {
     );
   };
 
-  export async function generateStaticParams() {
+async function generateStaticParams() {
     const { features } = await geojsonData;
     if (features){
       return features.map((feature: { properties: { sov0name: string } }) => ({
@@ -28,7 +28,7 @@ export interface Props {
     return [];
   }
   
-  export const getStaticPaths: GetStaticPaths = async () => {
+const getStaticPaths: GetStaticPaths = async () => {
     const paths = (await generateStaticParams()).map((params: any) => ({
       params,
     }));
