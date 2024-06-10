@@ -1,7 +1,3 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import geojsonData from "../../ne_110m_populated_places_simple.json";
-import { Feature } from "@/utils/types";
-
 export interface Props {
   params: {
     countryName: string;

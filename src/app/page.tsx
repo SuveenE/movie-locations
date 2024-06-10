@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Globe from "react-globe.gl";
 import { Feature } from "../utils/types";
-import geojsonData from "./ne_110m_populated_places_simple.json";
+import geojsonData from "../utils/ne_110m_populated_places_simple.json";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -18,8 +18,6 @@ export default function Home() {
 
     fetchPlaces();
   }, []);
-
-  console.log(places);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between font-mono">
