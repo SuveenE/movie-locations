@@ -1,3 +1,5 @@
-## Movie Locations 🎥 (Coming soon...)
+## Movie Locations 🎥
 
-Find locations where movies were shot at, so you can recreate the scene.
+Explore the exact filming locations of your favorite movies and recreate those iconic scenes
+
+![Movie Locations](/public/movie-locations-cover.png)
