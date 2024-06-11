@@ -1,5 +1,3 @@
-import countryData from "../../../utils/countries.json";
-
 export interface Props {
   params: {
     countryName: string;
@@ -9,13 +7,13 @@ export interface Props {
 const CountryHome = ({ params }: Props) => {
   return (
     <div className="flex flex-col w-full">
-      {countryData[params.countryName as keyof typeof countryData]}
+      {params.countryName}
     </div>
   );
 };
 
 export async function generateStaticParams() {
-  const countryNames = ['SGP', 'LKA']; 
+  const countryNames = ['Singapore', 'SriLanka']; 
   return countryNames
 }
 
