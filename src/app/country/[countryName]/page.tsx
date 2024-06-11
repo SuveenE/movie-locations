@@ -6,10 +6,6 @@ export interface Props {
   };
 }
 
-type CountryDataType = {
-  [key: string]: string;
-};
-
 const CountryHome = ({ params }: Props) => {
   return (
     <div className="flex flex-col w-full">
