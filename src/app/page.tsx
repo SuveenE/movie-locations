@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Globe from "react-globe.gl";
 import { Feature } from "../utils/types";
 import geojsonData from "../utils/ne_110m_populated_places_simple.json";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+
+const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
 const Home = () => {
   const [places, setPlaces] = useState<Feature[]>([]);
