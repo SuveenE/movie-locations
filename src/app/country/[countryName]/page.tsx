@@ -14,7 +14,9 @@ const CountryHome = ({ params }: Props) => {
 
 export async function generateStaticParams() {
   const countryNames = ['Singapore', 'SriLanka']; 
-  return countryNames
+  return countryNames.map((countryName) => ({
+    countryName: countryName.replace(' ', '%20'), 
+  }));
 }
 
 export default CountryHome;
