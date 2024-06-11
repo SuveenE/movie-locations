@@ -6,7 +6,7 @@ import { Feature } from "../utils/types";
 import geojsonData from "../utils/ne_110m_populated_places_simple.json";
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+const Home = () => {
   const [places, setPlaces] = useState<Feature[]>([]);
   const router = useRouter();
 
@@ -46,3 +46,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;
