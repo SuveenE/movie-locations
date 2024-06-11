@@ -42,7 +42,7 @@ const Home = () => {
         labelColor={() => "rgba(255, 165, 0, 0.75)"}
         labelResolution={2}
         onLabelClick={(d) =>
-          router.push(`/country/${(d as Feature).properties.sov0name || 'Singapore'}`)
+          router.push(`/country/${(d as Feature).properties.sov_a3 || 'SGP'}`)
         }
       />
     </main>
