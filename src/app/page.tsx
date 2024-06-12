@@ -5,6 +5,7 @@ import { Feature } from "../utils/types";
 import geojsonData from "../utils/ne_110m_populated_places_simple.json";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
@@ -42,11 +43,31 @@ const Home = () => {
         labelColor={() => "rgba(255, 165, 0, 0.75)"}
         labelResolution={2}
         onLabelClick={(d) =>
-          router.push(`/country/${(d as Feature).properties.sov0name || 'Singapore'}`)
+          router.push(
+            `/country/${(d as Feature).properties.sov0name || "Singapore"}`
+          )
         }
       />
+      <div className="text-center flex flex-row gap-2 items-center fixed bottom-1 left-1/2 transform -translate-x-1/2 text-white p-2 font-mono bg-black z-50 rounded-lg shadow-md max-w-[500px]">
+        <Image
+          className="ml-auto rounded-lg"
+          src="/github-logo.png"
+          alt="Github logo"
+          width={30}
+          height={30}
+          priority
+        />
+        <a
+          className="block text-sm text-gray-400"
+          href="https://github.com/SuveenE/movie-locations"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </a>
+      </div>
     </main>
   );
-}
+};
 
 export default Home;
