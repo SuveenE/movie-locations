@@ -1,5 +1,3 @@
-"use client";
-
 import MoviePage from "@/app/components/movie";
 
 export interface Props {
