@@ -37,7 +37,7 @@ const CountryPage= ({ params }: Props) => {
           <div
             key={movie.title}
             className="m-2 p-4 bg-slate-800 max-w-[360px] mx-auto  rounded-md"
-            onClick={() => router.push(`/country/${params.countryName}/${movie.pathname}`)}
+            onClick={() => router.push(`/movie/${movie.pathname}`)}
           >
             <p className="w-fit max-w-[240px] text-center">{movie.title}</p>
             <Image
