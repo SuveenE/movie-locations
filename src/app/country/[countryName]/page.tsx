@@ -19,5 +19,6 @@ export async function generateStaticParams() {
   }));
 }
 
+
 export default CountryHome;
 
