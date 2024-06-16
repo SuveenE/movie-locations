@@ -2,14 +2,14 @@ import MoviePage from "@/app/components/movie";
 
 export interface Props {
   params: {
-    movie: string;
+    movieName: string;
   };
 }
 
 export async function generateStaticParams() {
-    const movieNames = ['SriLanka/bridge-on-the-river-kwai', 'Singapore/crazy-rich-asians']; 
+    const movieNames = ['/bridge-on-the-river-kwai', '/crazy-rich-asians']; 
     return movieNames.map((movieName) => ({
-      movie: movieName,
+      movieName: movieName.replace(' ', '%20')
     }));
   }
 

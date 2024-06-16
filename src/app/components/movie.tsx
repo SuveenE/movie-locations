@@ -2,7 +2,7 @@
 
 export interface Props {
   params: {
-    movie: string;
+    movieName: string;
   };
 }
 
