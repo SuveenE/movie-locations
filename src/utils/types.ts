@@ -59,8 +59,16 @@ export interface FeatureCollection {
   features: Feature[];
 }
 
+export interface MovieLocation{
+  location: string;
+  address: string;
+  image: string;
+  description: string;
+}
+
 export interface Movie {
   title: string;
   image: string;
   pathname: string;
+  locations: MovieLocation[];
 }

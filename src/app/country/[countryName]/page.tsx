@@ -18,7 +18,7 @@ const CountryHome = ({ params }: Props) => {
   useEffect(() => {
     const fetchMovies = async () => {
       const moviesList = await movieData;
-      const movies = (moviesList as { [key: string]: Movie[] })[
+      const movies = (moviesList as unknown as { [key: string]: Movie[] })[
         params.countryName
       ] as Movie[];
       setMovies(movies as Movie[]);
@@ -31,7 +31,7 @@ const CountryHome = ({ params }: Props) => {
       <p className=" m-2 p-2 mx-auto text-lg text-lime-300">
         {params.countryName}
       </p>
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-4 w-fit mx-auto">
+      <div className="flex flex-wrap gap-3 mx-auto justify-center md:max-w-[1200px]">
       {movies &&
         movies.map((movie) => (
           <div

@@ -44,7 +44,7 @@ const Home = () => {
         labelResolution={2}
         onLabelClick={(d) =>
           router.push(
-            `/country/${(d as Feature).properties.sov0name || "Singapore"}`
+            `/country/${(d as Feature).properties.sov0name || "singapore"}`
           )
         }
       />

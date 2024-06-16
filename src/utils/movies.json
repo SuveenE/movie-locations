@@ -3,6 +3,23 @@
     {
       "title": "Crazy Rich Asians (2018)",
       "image": "/singapore/crazy-rich-asians.jpg",
+      "locations": [
+        {
+          "title": "Marina Bay Sands",
+          "image": "/singapore/crazy-rich-asians.jpg",
+          "description": "The Marina Bay Sands is a luxury resort that is famous for its infinity pool. It is featured in the movie Crazy Rich Asians as the hotel where the main characters stay."
+        },
+        {
+          "title": "Chijmes",
+          "image": "/singapore/crazy-rich-asians.jpg",
+          "description": "Chijmes is a historic building complex in Singapore that has been restored and converted into a dining, shopping, and entertainment hub. It is featured in the movie Crazy Rich Asians as the location of the wedding scene."
+        },
+        {
+          "title": "Newton Food Centre",
+          "image": "/singapore/crazy-rich-asians.jpg",
+          "description": "Newton Food Centre is a popular hawker centre in Singapore that offers a wide variety of local dishes. It is featured in the movie Crazy Rich Asians as the location of the street food scene."
+        }
+      ],
       "pathname": "crazy-rich-asians"
     }
   ],
