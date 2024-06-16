@@ -1,5 +1,9 @@
+"use client";
 import Image from "next/image";
 import movieData from "../../../utils/movies.json";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Movie } from "@/utils/types";
 
 export interface Props {
   params: {
@@ -8,29 +12,47 @@ export interface Props {
 }
 
 const CountryHome = ({ params }: Props) => {
+  const [movies, setMovies] = useState<Movie[]>([]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      const moviesList = await movieData;
+      const movies = (moviesList as { [key: string]: Movie[] })[
+        params.countryName
+      ] as Movie[];
+      setMovies(movies as Movie[]);
+    };
+
+    fetchMovies();
+  }, [params.countryName]);
   return (
     <div className="flex flex-col w-full font-mono">
-      <p className=" m-2 p-2 mx-auto text-lg text-lime-300">{params.countryName}</p>
-      <div className="m-2 p-4 bg-slate-800 max-w-[500px] mx-auto rounded-md">
-        <p>Crazy Rich Asians (2018)</p>
-        <Image
-          className="mx-auto rounded-lg mt-2"
-          src="/singapore/crazy-rich-asians.jpg"
-          alt="Crazy Rich Asians"
-          width={200}
-          height={200}
-          priority
-        />
-      </div>
+      <p className=" m-2 p-2 mx-auto text-lg text-lime-300">
+        {params.countryName}
+      </p>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-4 w-fit mx-auto">
+      {movies &&
+        movies.map((movie) => (
+          <div
+            key={movie.title}
+            className="m-2 p-4 bg-slate-800 max-w-[500px] mx-auto rounded-md"
+            onClick={() => router.push(`/country/${params.countryName}/${movie.pathname}`)}
+          >
+            <p>{movie.title}</p>
+            <Image
+              className="mx-auto rounded-lg mt-2"
+              src={movie.image}
+              alt={movie.title}
+              width={200}
+              height={200}
+              priority
+            />
+          </div>
+        ))}
+        </div>
     </div>
   );
 };
-
-export async function generateStaticParams() {
-  const countryNames = ['Singapore', 'SriLanka']; 
-  return countryNames.map((countryName) => ({
-    countryName: countryName.replace(' ', '%20'), 
-  }));
-}
 
 export default CountryHome;
