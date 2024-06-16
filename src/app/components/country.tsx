@@ -11,7 +11,7 @@ export interface Props {
   };
 }
 
-const CountryPage= ({ params }: Props) => {
+const CountryPage = ({ params }: Props) => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const router = useRouter();
 
@@ -32,28 +32,28 @@ const CountryPage= ({ params }: Props) => {
         {params.countryName}
       </p>
       <div className="flex flex-wrap gap-3 mx-auto justify-center md:max-w-[1200px]">
-      {movies &&
-        movies.map((movie) => (
-          <div
-            key={movie.title}
-            className="m-2 p-4 bg-slate-800 max-w-[360px] mx-auto  rounded-md"
-            onClick={() => router.push(`/movie/${movie.pathname}`)}
-          >
-            <p className="w-fit max-w-[240px] text-center">{movie.title}</p>
-            <Image
-              className="rounded-lg mt-2 mx-auto"
-              src={movie.image}
-              alt={movie.title}
-              width={200}
-              height={200}
-              priority
-            />
-          </div>
-        ))}
-        </div>
+        {movies &&
+          movies.map((movie) => (
+            <div
+              key={movie.title}
+              className="m-2 p-4 bg-slate-800 max-w-[360px] mx-auto  rounded-md"
+              onClick={() => router.push(`/movie/${movie.pathname}`)}
+            >
+              <p className="w-fit max-w-[240px] text-center">{movie.title}</p>
+              <Image
+                className="rounded-lg mt-2 mx-auto"
+                src={movie.image}
+                alt={movie.title}
+                width={200}
+                height={200}
+                priority
+                unoptimized
+              />
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
-
 
 export default CountryPage;

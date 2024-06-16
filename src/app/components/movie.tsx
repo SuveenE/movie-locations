@@ -24,7 +24,7 @@ const MoviePage = ({ params }: Props) => {
   return (
     <div className="flex flex-col w-full font-mono">
       <p className=" m-2 p-2 mx-auto text-lg text-lime-300">
-        Test
+        {params.movieName}
       </p>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-4 w-fit mx-auto">
         </div>
