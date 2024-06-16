@@ -1,26 +1,16 @@
 {
   "Singapore": [
     {
-      "title": "Crazy Rich Asians (2018",
-      "image": "/singapore/crazy-rich-asians.jpg",
-      "pathname": "crazy-rich-asians"
-    },
-    {
-      "title": "Crazy Rich Asians (2018",
+      "title": "Crazy Rich Asians (2018)",
       "image": "/singapore/crazy-rich-asians.jpg",
       "pathname": "crazy-rich-asians"
     }
   ],
-    "Malaysia": [
+    "SriLanka": [
         {
-        "title": "Crazy Rich Asians (2018",
-        "image": "/singapore/crazy-rich-asians.jpg",
-        "pathname": "crazy-rich-asians"
-        },
-        {
-        "title": "Crazy Rich Asians (2018",
-        "image": "/singapore/crazy-rich-asians.jpg",
-        "pathname": "crazy-rich-asians"
+        "title": "The Bridge on the River Kwai (1957)",
+        "image": "/srilanka/bridge-on-the-river-kwai.jpg",
+        "pathname": "bridge-on-the-river-kwai"
         }
     ]
 }

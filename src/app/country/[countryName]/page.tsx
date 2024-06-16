@@ -36,12 +36,12 @@ const CountryHome = ({ params }: Props) => {
         movies.map((movie) => (
           <div
             key={movie.title}
-            className="m-2 p-4 bg-slate-800 max-w-[500px] mx-auto rounded-md"
+            className="m-2 p-4 bg-slate-800 max-w-[360px] mx-auto  rounded-md"
             onClick={() => router.push(`/country/${params.countryName}/${movie.pathname}`)}
           >
-            <p>{movie.title}</p>
+            <p className="w-fit max-w-[240px] text-center">{movie.title}</p>
             <Image
-              className="mx-auto rounded-lg mt-2"
+              className="rounded-lg mt-2 mx-auto"
               src={movie.image}
               alt={movie.title}
               width={200}
