@@ -1,14 +1,12 @@
 "use client";
 
-import MoviePage from "@/app/components/movie";
-
 export interface Props {
   params: {
     movie: string;
   };
 }
 
-const MovieHome = ({ params }: Props) => {
+const MoviePage = ({ params }: Props) => {
 //   const [movies, setMovies] = useState<Movie[]>([]);
 //   const router = useRouter();
 
@@ -24,8 +22,14 @@ const MovieHome = ({ params }: Props) => {
 //     fetchMovies();
 //   }, [params.countryName]);
   return (
-    <MoviePage params={params} />
+    <div className="flex flex-col w-full font-mono">
+      <p className=" m-2 p-2 mx-auto text-lg text-lime-300">
+        Test
+      </p>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-4 w-fit mx-auto">
+        </div>
+    </div>
   );
 };
 
-export default MovieHome;
+export default MoviePage;
