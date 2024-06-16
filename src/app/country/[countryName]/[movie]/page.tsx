@@ -28,4 +28,11 @@ const MovieHome = ({ params }: Props) => {
   );
 };
 
+export async function generateStaticParams() {
+    const movieNames = ['bridge-on-the-river-kwai', 'crazy-rich-asians']; 
+    return movieNames.map((movieName) => ({
+      movie: movieName,
+    }));
+  }
+
 export default MovieHome;
